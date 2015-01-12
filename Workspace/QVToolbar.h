@@ -1,0 +1,33 @@
+/**
+* Tae Won Ha — @hataewon
+*
+* http://taewon.de
+* http://qvacua.com
+*
+* See LICENSE
+*/
+
+#import <Cocoa/Cocoa.h>
+#import "QVWorkspace.h"
+#import "QVToolbarButton.h"
+
+
+@interface QVToolbar : NSView <QVToolbarButtonDelegate>
+
+@property (nonatomic, readonly) QVToolbarLocation location;
+@property (nonatomic, readonly) CGFloat dimension;
+@property (nonatomic, readonly) NSOrderedSet *tools;
+
+- (instancetype)initWithLocation:(QVToolbarLocation)location;
+- (void)addToolView:(NSView *)toolView displayName:(NSString *)displayName;
+- (void)removeToolView:(NSView *)toolView;
+- (BOOL)hasTools;
+
+#pragma mark NSResonder
+- (void)mouseDown:(NSEvent *)theEvent;
+
+#pragma mark NSView
+- (void)drawRect:(NSRect)dirtyRect;
+- (void)resetCursorRects;
+
+@end
