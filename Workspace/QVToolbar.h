@@ -16,6 +16,7 @@
 
 @property (nonatomic, weak) QVWorkspace *workspace;
 @property (nonatomic, readonly) QVToolbarLocation location;
+@property (nonatomic) NSUInteger dragIncrement;
 @property (nonatomic, readonly) CGFloat dimension;
 @property (nonatomic, readonly) NSOrderedSet *tools;
 

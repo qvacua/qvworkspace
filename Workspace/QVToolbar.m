@@ -54,6 +54,7 @@ static const CGFloat qToolMinimumDimension = 50;
   _tools = [[NSMutableOrderedSet alloc] initWithCapacity:5];
   _toolBarConstraints = [[NSMutableArray alloc] initWithCapacity:50];
   _mouseDownOnGoing = NO;
+  _dragIncrement = 1;
 
   return self;
 }
@@ -78,7 +79,6 @@ static const CGFloat qToolMinimumDimension = 50;
 
 #pragma mark QVToolbarButtonDelegate
 - (void)toolbarButton:(QVToolbarButton *)toolbarButton clickedWithEvent:(NSEvent *)event {
-  NSLog(@"############## toolbar button clicked: %@", toolbarButton.title);
   toolbarButton.active = !toolbarButton.active;
   toolbarButton.tool.active = toolbarButton.active;
 
@@ -122,7 +122,6 @@ static const CGFloat qToolMinimumDimension = 50;
   }
 
   if (!self.hasActiveTool) {
-    NSLog(@"######## no active tool, calling super");
     [super mouseDown:theEvent];
     return;
   }
@@ -131,7 +130,6 @@ static const CGFloat qToolMinimumDimension = 50;
   BOOL mouseInResizeRect = NSMouseInRect(initialMouseDownLoc, self.resizeCursorRect, self.isFlipped);
 
   if (!mouseInResizeRect || theEvent.type != NSLeftMouseDown) {
-    NSLog(@"######## not in resize rect or not left mouse down, calling super");
     [super mouseDown:theEvent];
     return;
   }
@@ -157,8 +155,7 @@ static const CGFloat qToolMinimumDimension = 50;
     if (!dragged && distance < 1) {continue;}
 
     NSPoint locInSuperview = [self.superview convertPoint:curEvent.locationInWindow fromView:nil];
-    CGFloat newToolDimension = [_workspace toolbar:self
-                             willResizeToDimension:[self toolDimensionForLocationInSuperview:locInSuperview]];
+    CGFloat newToolDimension = [self newToolDimension:locInSuperview];
 
     _activeTool.dimension = MAX(floor(newToolDimension), qToolMinimumDimension);
     _toolbarWidthConstraint.constant = self.dimension;
@@ -172,6 +169,13 @@ static const CGFloat qToolMinimumDimension = 50;
   [_workspace toolbarDidResize:self];
 
   _mouseDownOnGoing = NO;
+}
+
+- (CGFloat)newToolDimension:(CGPoint)locInSuperview {
+  CGFloat rawDimension = [self toolDimensionForLocationInSuperview:locInSuperview];
+  CGFloat correctedDimension = _dragIncrement * floor(rawDimension / _dragIncrement);
+
+  return [_workspace toolbar:self willResizeToDimension:correctedDimension];
 }
 
 #pragma mark NSView
