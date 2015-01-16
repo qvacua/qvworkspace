@@ -42,6 +42,7 @@
 		1929BAEA739E2ADD5E025C23 /* QVToolbarButtonDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QVToolbarButtonDelegate.h; sourceTree = "<group>"; };
 		1929BB32CDC9ECE7C1BEFF06 /* NSString+QVWorkspace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+QVWorkspace.m"; sourceTree = "<group>"; };
 		1929BB432D20728A3A689481 /* NSString+QVWorkspace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+QVWorkspace.h"; sourceTree = "<group>"; };
+		1929BFF3EDCBCFD47A940584 /* QVWorkspaceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QVWorkspaceDelegate.h; sourceTree = "<group>"; };
 		4B12DE161A4F114600DF5FC1 /* Workspace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Workspace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B12DE1A1A4F114600DF5FC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B12DE1B1A4F114600DF5FC1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -142,6 +143,7 @@
 				1929BA37CA8398DB1D09AB21 /* QVSeparatorLine.h */,
 				1929B54DB25BA8C828DCB062 /* NSView+QVWorkspace.m */,
 				1929B847D504CB946769C2B5 /* NSView+QVWorkspace.h */,
+				1929BFF3EDCBCFD47A940584 /* QVWorkspaceDelegate.h */,
 			);
 			path = Workspace;
 			sourceTree = "<group>";

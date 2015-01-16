@@ -136,7 +136,7 @@ static const CGFloat qToolMinimumDimension = 50;
     return;
   }
 
-  // TODO: call willStartResize callback here
+  [_workspace toolbarWillResize:self];
 
   _mouseDownOnGoing = YES;
   _toolbarWidthConstraint.priority = NSLayoutPriorityDragThatCannotResizeWindow - 1;
@@ -157,7 +157,8 @@ static const CGFloat qToolMinimumDimension = 50;
     if (!dragged && distance < 1) {continue;}
 
     NSPoint locInSuperview = [self.superview convertPoint:curEvent.locationInWindow fromView:nil];
-    CGFloat newToolDimension = [self toolDimensionForLocationInSuperview:locInSuperview];
+    CGFloat newToolDimension = [_workspace toolbar:self
+                             willResizeToDimension:[self toolDimensionForLocationInSuperview:locInSuperview]];
 
     _activeTool.dimension = MAX(floor(newToolDimension), qToolMinimumDimension);
     _toolbarWidthConstraint.constant = self.dimension;
@@ -168,7 +169,7 @@ static const CGFloat qToolMinimumDimension = 50;
 
   _toolbarWidthConstraint.priority = NSLayoutPriorityDragThatCannotResizeWindow;
 
-  // TODO: call didEndResize callback here
+  [_workspace toolbarDidResize:self];
 
   _mouseDownOnGoing = NO;
 }

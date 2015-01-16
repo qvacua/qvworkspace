@@ -12,6 +12,7 @@
 #import "QVToolbar.h"
 #import "PureLayout.h"
 #import "NSView+QVWorkspace.h"
+#import "QVWorkspaceDelegate.h"
 
 
 static const CGFloat qMinCenterViewDimension = 100;
@@ -35,6 +36,26 @@ static const CGFloat qMinCenterViewDimension = 100;
   [self updateToolbars];
 }
 
+- (void)toolbarWillResize:(QVToolbar *)toolbar {
+  if ([_delegate respondsToSelector:@selector(toolbarWillResize:)]) {
+    [_delegate toolbarWillResize:toolbar];
+  }
+}
+
+- (void)toolbarDidResize:(QVToolbar *)toolbar {
+  if ([_delegate respondsToSelector:@selector(toolbarDidResize:)]) {
+    [_delegate toolbarDidResize:toolbar];
+  }
+}
+
+- (CGFloat)toolbar:(QVToolbar *)toolbar willResizeToDimension:(CGFloat)dimension {
+  if ([_delegate respondsToSelector:@selector(toolbar:willResizeToDimension:)]) {
+    return [_delegate toolbar:toolbar willResizeToDimension:dimension];
+  }
+
+  return dimension;
+}
+
 #pragma mark NSView
 - (instancetype)initWithFrame:(NSRect)frameRect {
   self = [super initWithFrame:frameRect];
@@ -55,6 +76,10 @@ static const CGFloat qMinCenterViewDimension = 100;
       @(QVToolbarLocationBottom) : _bottomBar,
       @(QVToolbarLocationLeft) : _leftBar,
   };
+
+  for (QVToolbar *toolbar in _bars.allValues) {
+    toolbar.workspace = self;
+  }
 
   _toolbarConstraints = [[NSMutableArray alloc] initWithCapacity:50];
 
