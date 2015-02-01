@@ -90,6 +90,8 @@ static const CGFloat qMinCenterViewDimension = 100;
   [self removeConstraints:_toolbarConstraints];
   [super updateConstraints];
 
+  [_toolbarConstraints removeAllObjects];
+
   [_toolbarConstraints addObjectsFromArray:self.topBarConstraints];
   [_toolbarConstraints addObjectsFromArray:self.bottomBarConstraints];
   [_toolbarConstraints addObjectsFromArray:self.leftBarConstraints];
