@@ -12,6 +12,9 @@
 #import "QVToolbarButton.h"
 
 
+@protocol QVToolbarDelegate;
+
+
 @interface QVToolbar : NSView <QVToolbarButtonDelegate>
 
 @property (nonatomic, weak) QVWorkspace *workspace;
@@ -19,6 +22,7 @@
 @property (nonatomic) NSUInteger dragIncrement;
 @property (nonatomic, readonly) CGFloat dimension;
 @property (nonatomic, readonly) NSOrderedSet *tools;
+@property (nonatomic, weak) id <QVToolbarDelegate> delegate;
 
 - (instancetype)initWithLocation:(QVToolbarLocation)location;
 - (void)addToolView:(NSView *)toolView displayName:(NSString *)displayName;

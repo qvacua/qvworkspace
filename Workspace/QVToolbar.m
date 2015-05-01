@@ -13,6 +13,7 @@
 #import "PureLayout.h"
 #import "QVSeparatorLine.h"
 #import "NSView+QVWorkspace.h"
+#import "QVToolbarDelegate.h"
 
 
 #define SQ(x) ((x)*(x))
@@ -79,6 +80,7 @@ static const CGFloat qToolMinimumDimension = 50;
 - (void)drawRect:(NSRect)dirtyRect {
   [[NSColor windowBackgroundColor] set];
   NSRectFill(self.bounds);
+  NSLog(@"########## drawRect");
 }
 
 #pragma mark QVToolbarButtonDelegate
@@ -98,8 +100,7 @@ static const CGFloat qToolMinimumDimension = 50;
   if (toolbarButton.tool.active) {
     _activeTool = toolbarButton.tool;
     [self addSubview:_buttonToToolViewSeparator];
-  }
-  else {
+  } else {
     _activeTool = nil;
     [_buttonToToolViewSeparator removeFromSuperview];
   }
@@ -201,6 +202,8 @@ static const CGFloat qToolMinimumDimension = 50;
   [self updateConstraintsForToolBar];
 
   [self.window invalidateCursorRectsForView:self];
+
+  [_delegate toolbarChangedDimension:self];
 }
 
 - (CGRect)resizeCursorRect {
