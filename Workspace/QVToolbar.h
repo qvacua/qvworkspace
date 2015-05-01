@@ -24,6 +24,7 @@
 - (void)addToolView:(NSView *)toolView displayName:(NSString *)displayName;
 - (void)removeToolView:(NSView *)toolView;
 - (BOOL)hasTools;
+- (BOOL)hasActiveTool;
 
 #pragma mark NSResponder
 - (void)mouseDown:(NSEvent *)theEvent;

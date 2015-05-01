@@ -71,6 +71,10 @@ static const CGFloat qToolMinimumDimension = 50;
   [self updateToolbar];
 }
 
+- (BOOL)hasActiveTool {
+  return _activeTool != nil;
+}
+
 #pragma mark NSView
 - (void)drawRect:(NSRect)dirtyRect {
   [[NSColor windowBackgroundColor] set];
@@ -232,6 +236,14 @@ static const CGFloat qToolMinimumDimension = 50;
   }
 }
 
+- (NSView *)hitTest:(NSPoint)point {
+  if (NSMouseInRect([self convertPoint:point fromView:self.superview], self.resizeCursorRect, self.isFlipped)) {
+    return self;
+  }
+
+  return [super hitTest:point];
+}
+
 - (NSString *)description {
   switch (_location) {
     case QVToolbarLocationTop:
@@ -352,10 +364,6 @@ static const CGFloat qToolMinimumDimension = 50;
 
   _toolbarWidthConstraint.priority = NSLayoutPriorityDragThatCannotResizeWindow;
   [self addConstraint:_toolbarWidthConstraint];
-}
-
-- (BOOL)hasActiveTool {
-  return _activeTool != nil;
 }
 
 - (void)updateConstraintsForActiveToolView {
