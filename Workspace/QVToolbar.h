@@ -25,7 +25,7 @@
 - (void)removeToolView:(NSView *)toolView;
 - (BOOL)hasTools;
 
-#pragma mark NSResonder
+#pragma mark NSResponder
 - (void)mouseDown:(NSEvent *)theEvent;
 
 #pragma mark NSView
