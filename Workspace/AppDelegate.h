@@ -10,6 +10,7 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
+- (IBAction)changeCenterView:(id)sender;
 
 @end
 
