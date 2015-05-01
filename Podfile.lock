@@ -5,6 +5,6 @@ DEPENDENCIES:
   - PureLayout (= 2.0.4)
 
 SPEC CHECKSUMS:
-  PureLayout: ddf4fedf7e2f5984f972bbd2205dda4fc3418347
+  PureLayout: 39ab7d09edec14750ba3982bf19126916861bba5
 
-COCOAPODS: 0.35.0
+COCOAPODS: 0.36.3
