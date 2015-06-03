@@ -80,7 +80,6 @@ static const CGFloat qToolMinimumDimension = 50;
 - (void)drawRect:(NSRect)dirtyRect {
   [[NSColor windowBackgroundColor] set];
   NSRectFill(self.bounds);
-  NSLog(@"########## drawRect");
 }
 
 #pragma mark QVToolbarButtonDelegate
