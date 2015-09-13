@@ -8,7 +8,7 @@
 */
 
 #import <Cocoa/Cocoa.h>
-#import "QVWorkspace.h"
+#import "QVWorkspaceView.h"
 #import "QVToolbarButton.h"
 
 

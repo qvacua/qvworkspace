@@ -1,0 +1,552 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B972D881BA5853A00D8E49A /* QVWorkspace.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B972D871BA5853A00D8E49A /* QVWorkspace.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B972DAE1BA5857F00D8E49A /* NSString+QVWorkspace.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B972D9E1BA5857F00D8E49A /* NSString+QVWorkspace.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B972DAF1BA5857F00D8E49A /* NSString+QVWorkspace.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B972D9F1BA5857F00D8E49A /* NSString+QVWorkspace.m */; };
+		4B972DB01BA5857F00D8E49A /* NSView+QVWorkspace.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B972DA01BA5857F00D8E49A /* NSView+QVWorkspace.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B972DB11BA5857F00D8E49A /* NSView+QVWorkspace.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B972DA11BA5857F00D8E49A /* NSView+QVWorkspace.m */; };
+		4B972DB21BA5857F00D8E49A /* QVSeparatorLine.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B972DA21BA5857F00D8E49A /* QVSeparatorLine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B972DB31BA5857F00D8E49A /* QVSeparatorLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B972DA31BA5857F00D8E49A /* QVSeparatorLine.m */; };
+		4B972DB41BA5857F00D8E49A /* QVTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B972DA41BA5857F00D8E49A /* QVTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B972DB51BA5857F00D8E49A /* QVTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B972DA51BA5857F00D8E49A /* QVTool.m */; };
+		4B972DB61BA5857F00D8E49A /* QVToolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B972DA61BA5857F00D8E49A /* QVToolbar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B972DB71BA5857F00D8E49A /* QVToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B972DA71BA5857F00D8E49A /* QVToolbar.m */; };
+		4B972DB81BA5857F00D8E49A /* QVToolbarButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B972DA81BA5857F00D8E49A /* QVToolbarButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B972DB91BA5857F00D8E49A /* QVToolbarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B972DA91BA5857F00D8E49A /* QVToolbarButton.m */; };
+		4B972DBA1BA5857F00D8E49A /* QVToolbarButtonDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B972DAA1BA5857F00D8E49A /* QVToolbarButtonDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B972DBB1BA5857F00D8E49A /* QVWorkspaceDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B972DAB1BA5857F00D8E49A /* QVWorkspaceDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B972DBC1BA5857F00D8E49A /* QVWorkspaceView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B972DAC1BA5857F00D8E49A /* QVWorkspaceView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B972DBD1BA5857F00D8E49A /* QVWorkspaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B972DAD1BA5857F00D8E49A /* QVWorkspaceView.m */; };
+		4B972DC81BA5859500D8E49A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B972DC71BA5859500D8E49A /* AppDelegate.m */; };
+		4B972DCA1BA5859500D8E49A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B972DC91BA5859500D8E49A /* main.m */; };
+		4B972DCC1BA5859500D8E49A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B972DCB1BA5859500D8E49A /* Images.xcassets */; };
+		4B972DCF1BA5859500D8E49A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B972DCD1BA5859500D8E49A /* MainMenu.xib */; };
+		4B972DE31BA585F500D8E49A /* PureLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B972DE21BA585F500D8E49A /* PureLayout.framework */; };
+		4B972DE51BA5865600D8E49A /* PureLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B972DE21BA585F500D8E49A /* PureLayout.framework */; };
+		4B972DE61BA5865600D8E49A /* PureLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B972DE21BA585F500D8E49A /* PureLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4B972DE71BA5865600D8E49A /* QVWorkspace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B972D821BA5853A00D8E49A /* QVWorkspace.framework */; };
+		4B972DE81BA5865600D8E49A /* QVWorkspace.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B972D821BA5853A00D8E49A /* QVWorkspace.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4B972DE91BA5865600D8E49A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B972D791BA5853A00D8E49A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B972D811BA5853A00D8E49A;
+			remoteInfo = QVWorkspace;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4B972DEB1BA5865600D8E49A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4B972DE61BA5865600D8E49A /* PureLayout.framework in Embed Frameworks */,
+				4B972DE81BA5865600D8E49A /* QVWorkspace.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4B972D821BA5853A00D8E49A /* QVWorkspace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QVWorkspace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B972D861BA5853A00D8E49A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B972D871BA5853A00D8E49A /* QVWorkspace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QVWorkspace.h; sourceTree = "<group>"; };
+		4B972D9E1BA5857F00D8E49A /* NSString+QVWorkspace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+QVWorkspace.h"; sourceTree = "<group>"; };
+		4B972D9F1BA5857F00D8E49A /* NSString+QVWorkspace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+QVWorkspace.m"; sourceTree = "<group>"; };
+		4B972DA01BA5857F00D8E49A /* NSView+QVWorkspace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+QVWorkspace.h"; sourceTree = "<group>"; };
+		4B972DA11BA5857F00D8E49A /* NSView+QVWorkspace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+QVWorkspace.m"; sourceTree = "<group>"; };
+		4B972DA21BA5857F00D8E49A /* QVSeparatorLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QVSeparatorLine.h; sourceTree = "<group>"; };
+		4B972DA31BA5857F00D8E49A /* QVSeparatorLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QVSeparatorLine.m; sourceTree = "<group>"; };
+		4B972DA41BA5857F00D8E49A /* QVTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QVTool.h; sourceTree = "<group>"; };
+		4B972DA51BA5857F00D8E49A /* QVTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QVTool.m; sourceTree = "<group>"; };
+		4B972DA61BA5857F00D8E49A /* QVToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QVToolbar.h; sourceTree = "<group>"; };
+		4B972DA71BA5857F00D8E49A /* QVToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QVToolbar.m; sourceTree = "<group>"; };
+		4B972DA81BA5857F00D8E49A /* QVToolbarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QVToolbarButton.h; sourceTree = "<group>"; };
+		4B972DA91BA5857F00D8E49A /* QVToolbarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QVToolbarButton.m; sourceTree = "<group>"; };
+		4B972DAA1BA5857F00D8E49A /* QVToolbarButtonDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QVToolbarButtonDelegate.h; sourceTree = "<group>"; };
+		4B972DAB1BA5857F00D8E49A /* QVWorkspaceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QVWorkspaceDelegate.h; sourceTree = "<group>"; };
+		4B972DAC1BA5857F00D8E49A /* QVWorkspaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QVWorkspaceView.h; sourceTree = "<group>"; };
+		4B972DAD1BA5857F00D8E49A /* QVWorkspaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QVWorkspaceView.m; sourceTree = "<group>"; };
+		4B972DC21BA5859500D8E49A /* QVWorkspaceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QVWorkspaceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B972DC51BA5859500D8E49A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B972DC61BA5859500D8E49A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4B972DC71BA5859500D8E49A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4B972DC91BA5859500D8E49A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4B972DCB1BA5859500D8E49A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4B972DCE1BA5859500D8E49A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		4B972DE21BA585F500D8E49A /* PureLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PureLayout.framework; path = Carthage/Build/Mac/PureLayout.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4B972D7E1BA5853A00D8E49A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B972DE31BA585F500D8E49A /* PureLayout.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B972DBF1BA5859500D8E49A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B972DE51BA5865600D8E49A /* PureLayout.framework in Frameworks */,
+				4B972DE71BA5865600D8E49A /* QVWorkspace.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B972D781BA5853A00D8E49A = {
+			isa = PBXGroup;
+			children = (
+				4B972D841BA5853A00D8E49A /* QVWorkspace */,
+				4B972DC31BA5859500D8E49A /* QVWorkspaceDemo */,
+				4B972DE41BA5863E00D8E49A /* Frameworks */,
+				4B972D831BA5853A00D8E49A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4B972D831BA5853A00D8E49A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B972D821BA5853A00D8E49A /* QVWorkspace.framework */,
+				4B972DC21BA5859500D8E49A /* QVWorkspaceDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B972D841BA5853A00D8E49A /* QVWorkspace */ = {
+			isa = PBXGroup;
+			children = (
+				4B972D9E1BA5857F00D8E49A /* NSString+QVWorkspace.h */,
+				4B972D9F1BA5857F00D8E49A /* NSString+QVWorkspace.m */,
+				4B972DA01BA5857F00D8E49A /* NSView+QVWorkspace.h */,
+				4B972DA11BA5857F00D8E49A /* NSView+QVWorkspace.m */,
+				4B972DA21BA5857F00D8E49A /* QVSeparatorLine.h */,
+				4B972DA31BA5857F00D8E49A /* QVSeparatorLine.m */,
+				4B972DA41BA5857F00D8E49A /* QVTool.h */,
+				4B972DA51BA5857F00D8E49A /* QVTool.m */,
+				4B972DA61BA5857F00D8E49A /* QVToolbar.h */,
+				4B972DA71BA5857F00D8E49A /* QVToolbar.m */,
+				4B972DA81BA5857F00D8E49A /* QVToolbarButton.h */,
+				4B972DA91BA5857F00D8E49A /* QVToolbarButton.m */,
+				4B972DAA1BA5857F00D8E49A /* QVToolbarButtonDelegate.h */,
+				4B972DAB1BA5857F00D8E49A /* QVWorkspaceDelegate.h */,
+				4B972DAC1BA5857F00D8E49A /* QVWorkspaceView.h */,
+				4B972DAD1BA5857F00D8E49A /* QVWorkspaceView.m */,
+				4B972D871BA5853A00D8E49A /* QVWorkspace.h */,
+				4B972D851BA5853A00D8E49A /* Supporting Files */,
+			);
+			path = QVWorkspace;
+			sourceTree = "<group>";
+		};
+		4B972D851BA5853A00D8E49A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4B972D861BA5853A00D8E49A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4B972DC31BA5859500D8E49A /* QVWorkspaceDemo */ = {
+			isa = PBXGroup;
+			children = (
+				4B972DC61BA5859500D8E49A /* AppDelegate.h */,
+				4B972DC71BA5859500D8E49A /* AppDelegate.m */,
+				4B972DCB1BA5859500D8E49A /* Images.xcassets */,
+				4B972DCD1BA5859500D8E49A /* MainMenu.xib */,
+				4B972DC41BA5859500D8E49A /* Supporting Files */,
+			);
+			path = QVWorkspaceDemo;
+			sourceTree = "<group>";
+		};
+		4B972DC41BA5859500D8E49A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4B972DC51BA5859500D8E49A /* Info.plist */,
+				4B972DC91BA5859500D8E49A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4B972DE41BA5863E00D8E49A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B972DE21BA585F500D8E49A /* PureLayout.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4B972D7F1BA5853A00D8E49A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B972DBB1BA5857F00D8E49A /* QVWorkspaceDelegate.h in Headers */,
+				4B972DBA1BA5857F00D8E49A /* QVToolbarButtonDelegate.h in Headers */,
+				4B972DB01BA5857F00D8E49A /* NSView+QVWorkspace.h in Headers */,
+				4B972DB61BA5857F00D8E49A /* QVToolbar.h in Headers */,
+				4B972DBC1BA5857F00D8E49A /* QVWorkspaceView.h in Headers */,
+				4B972DB41BA5857F00D8E49A /* QVTool.h in Headers */,
+				4B972D881BA5853A00D8E49A /* QVWorkspace.h in Headers */,
+				4B972DB81BA5857F00D8E49A /* QVToolbarButton.h in Headers */,
+				4B972DAE1BA5857F00D8E49A /* NSString+QVWorkspace.h in Headers */,
+				4B972DB21BA5857F00D8E49A /* QVSeparatorLine.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4B972D811BA5853A00D8E49A /* QVWorkspace */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B972D981BA5853A00D8E49A /* Build configuration list for PBXNativeTarget "QVWorkspace" */;
+			buildPhases = (
+				4B972D7D1BA5853A00D8E49A /* Sources */,
+				4B972D7E1BA5853A00D8E49A /* Frameworks */,
+				4B972D7F1BA5853A00D8E49A /* Headers */,
+				4B972D801BA5853A00D8E49A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QVWorkspace;
+			productName = QVWorkspace;
+			productReference = 4B972D821BA5853A00D8E49A /* QVWorkspace.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4B972DC11BA5859500D8E49A /* QVWorkspaceDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B972DDC1BA5859500D8E49A /* Build configuration list for PBXNativeTarget "QVWorkspaceDemo" */;
+			buildPhases = (
+				4B972DBE1BA5859500D8E49A /* Sources */,
+				4B972DBF1BA5859500D8E49A /* Frameworks */,
+				4B972DC01BA5859500D8E49A /* Resources */,
+				4B972DEB1BA5865600D8E49A /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B972DEA1BA5865600D8E49A /* PBXTargetDependency */,
+			);
+			name = QVWorkspaceDemo;
+			productName = QVWorkspaceDemo;
+			productReference = 4B972DC21BA5859500D8E49A /* QVWorkspaceDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4B972D791BA5853A00D8E49A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Tae Won Ha";
+				TargetAttributes = {
+					4B972D811BA5853A00D8E49A = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					4B972DC11BA5859500D8E49A = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = 4B972D7C1BA5853A00D8E49A /* Build configuration list for PBXProject "QVWorkspace" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4B972D781BA5853A00D8E49A;
+			productRefGroup = 4B972D831BA5853A00D8E49A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4B972D811BA5853A00D8E49A /* QVWorkspace */,
+				4B972DC11BA5859500D8E49A /* QVWorkspaceDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4B972D801BA5853A00D8E49A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B972DC01BA5859500D8E49A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B972DCC1BA5859500D8E49A /* Images.xcassets in Resources */,
+				4B972DCF1BA5859500D8E49A /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4B972D7D1BA5853A00D8E49A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B972DB51BA5857F00D8E49A /* QVTool.m in Sources */,
+				4B972DB11BA5857F00D8E49A /* NSView+QVWorkspace.m in Sources */,
+				4B972DAF1BA5857F00D8E49A /* NSString+QVWorkspace.m in Sources */,
+				4B972DB71BA5857F00D8E49A /* QVToolbar.m in Sources */,
+				4B972DB91BA5857F00D8E49A /* QVToolbarButton.m in Sources */,
+				4B972DB31BA5857F00D8E49A /* QVSeparatorLine.m in Sources */,
+				4B972DBD1BA5857F00D8E49A /* QVWorkspaceView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B972DBE1BA5859500D8E49A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B972DCA1BA5859500D8E49A /* main.m in Sources */,
+				4B972DC81BA5859500D8E49A /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4B972DEA1BA5865600D8E49A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B972D811BA5853A00D8E49A /* QVWorkspace */;
+			targetProxy = 4B972DE91BA5865600D8E49A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4B972DCD1BA5859500D8E49A /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B972DCE1BA5859500D8E49A /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4B972D961BA5853A00D8E49A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4B972D971BA5853A00D8E49A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4B972D991BA5853A00D8E49A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = QVWorkspace/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4B972D9A1BA5853A00D8E49A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = QVWorkspace/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		4B972DDD1BA5859500D8E49A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = QVWorkspaceDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4B972DDE1BA5859500D8E49A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = QVWorkspaceDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4B972D7C1BA5853A00D8E49A /* Build configuration list for PBXProject "QVWorkspace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B972D961BA5853A00D8E49A /* Debug */,
+				4B972D971BA5853A00D8E49A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B972D981BA5853A00D8E49A /* Build configuration list for PBXNativeTarget "QVWorkspace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B972D991BA5853A00D8E49A /* Debug */,
+				4B972D9A1BA5853A00D8E49A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B972DDC1BA5859500D8E49A /* Build configuration list for PBXNativeTarget "QVWorkspaceDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B972DDD1BA5859500D8E49A /* Debug */,
+				4B972DDE1BA5859500D8E49A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4B972D791BA5853A00D8E49A /* Project object */;
+}

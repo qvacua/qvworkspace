@@ -1,9 +1,9 @@
 //
 //  main.m
-//  Workspace
+//  QVWorkspaceDemo
 //
-//  Created by Tae Won Ha on 27/12/14.
-//  Copyright (c) 2014 Tae Won Ha. All rights reserved.
+//  Created by Tae Won Ha on 13/09/15.
+//  Copyright (c) 2015 Tae Won Ha. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
