@@ -30,7 +30,7 @@ typedef NS_ENUM(NSInteger, QVToolbarLocation){
 @property (readonly) QVToolbar *leftBar;
 @property id<QVWorkspaceDelegate> delegate;
 
-@property NSView *centerView;
+@property (nonatomic) NSView *centerView;
 
 #pragma mark Public
 - (void)addToolView:(NSView *)toolView displayName:(NSString *)displayName location:(QVToolbarLocation)location;

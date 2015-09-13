@@ -19,6 +19,16 @@ static const CGFloat qMinCenterViewDimension = 100;
   NSMutableArray *_toolbarConstraints;
 }
 
+#pragma mark Properties
+- (void)setCenterView:(NSView *)centerView {
+  if (_centerView == centerView) {return;}
+
+  [_centerView removeFromSuperview];
+  _centerView = centerView;
+
+  [self updateToolbars];
+}
+
 #pragma mark Public
 - (void)addToolView:(NSView *)toolView displayName:(NSString *)displayName location:(QVToolbarLocation)location {
   [_bars[@(location)] addToolView:toolView displayName:displayName];
