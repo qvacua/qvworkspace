@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import <QVWorkspace/QVWorkspace.h>
 #import <PureLayout/PureLayout.h>
-#import "QVSeparatorLine.h"
 
 
 @interface AppDelegate ()
