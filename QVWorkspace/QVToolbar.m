@@ -420,7 +420,7 @@ static const CGFloat qToolMinimumDimension = 50;
 }
 
 - (void)updateToolbar {
-  [self removeAllSubviews];
+  [self _qvworkspace_removeAllSubviews];
 
   [self addSubview:_separator];
 

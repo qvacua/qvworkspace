@@ -12,7 +12,7 @@
 
 @implementation NSView (QVWorkspace)
 
-- (void)removeAllSubviews {
+- (void)_qvworkspace_removeAllSubviews {
   NSArray *allSubViews = self.subviews.copy;
 
   for (NSView *view in allSubViews) {

@@ -12,6 +12,6 @@
 
 @interface NSString (QVWorkspace)
 
-- (void)drawAtBasePoint:(CGPoint)base angle:(CGFloat)radian attributes:(NSDictionary *)attr;
+- (void)_qvworkspace_drawAtBasePoint:(CGPoint)base angle:(CGFloat)radian attributes:(NSDictionary *)attr;
 
 @end

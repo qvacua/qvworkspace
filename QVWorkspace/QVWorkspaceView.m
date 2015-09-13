@@ -107,7 +107,7 @@ static const CGFloat qMinCenterViewDimension = 100;
 
 #pragma mark Private
 - (void)updateToolbars {
-  [self removeAllSubviews];
+  [self _qvworkspace_removeAllSubviews];
 
   [self addSubview:_centerView];
 

@@ -12,7 +12,7 @@
 
 @implementation NSString (QVWorkspace)
 
-- (void)drawAtBasePoint:(CGPoint)base angle:(CGFloat)radian attributes:(NSDictionary *)attr {
+- (void)_qvworkspace_drawAtBasePoint:(CGPoint)base angle:(CGFloat)radian attributes:(NSDictionary *)attr {
   CGSize textSize = [self sizeWithAttributes:attr];
 
   NSAffineTransform *translation = [[NSAffineTransform alloc] init];

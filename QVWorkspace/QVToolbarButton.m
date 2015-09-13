@@ -105,10 +105,10 @@ static const CGFloat qMaxButtonHeight = 30;
       [_title drawAtPoint:CGPointMake(qButtonHorizontalPadding, qButtonVerticalPadding) withAttributes:attrs];
       break;
     case QVToolbarButtonOrientationVerticalLeft:
-      [_title drawAtBasePoint:CGPointMake(self.size.width / 2, self.size.height / 2) angle:M_PI_2 attributes:attrs];
+      [_title _qvworkspace_drawAtBasePoint:CGPointMake(self.size.width / 2, self.size.height / 2) angle:M_PI_2 attributes:attrs];
       break;
     case QVToolbarButtonOrientationVerticalRight:
-      [_title drawAtBasePoint:CGPointMake(self.size.width / 2, self.size.height / 2) angle:-M_PI_2 attributes:attrs];
+      [_title _qvworkspace_drawAtBasePoint:CGPointMake(self.size.width / 2, self.size.height / 2) angle:-M_PI_2 attributes:attrs];
       break;
   }
 }

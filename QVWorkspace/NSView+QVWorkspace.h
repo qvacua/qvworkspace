@@ -12,5 +12,6 @@
 
 @interface NSView (QVWorkspace)
 
-- (void)removeAllSubviews;
+- (void)_qvworkspace_removeAllSubviews;
+
 @end
