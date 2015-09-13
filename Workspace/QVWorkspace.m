@@ -10,7 +10,7 @@
 #import "QVWorkspace.h"
 #import "QVToolbarButtonDelegate.h"
 #import "QVToolbar.h"
-#import "PureLayout.h"
+#import <PureLayout/PureLayout.h>
 #import "NSView+QVWorkspace.h"
 #import "QVWorkspaceDelegate.h"
 

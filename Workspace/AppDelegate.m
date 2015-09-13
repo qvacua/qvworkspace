@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "QVWorkspace.h"
-#import "PureLayout.h"
+#import <PureLayout/PureLayout.h>
 #import "QVSeparatorLine.h"
 
 

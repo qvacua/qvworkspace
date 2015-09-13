@@ -7,8 +7,8 @@
 * See LICENSE
 */
 
+#import <PureLayout/PureLayout.h>
 #import "QVToolbarButton.h"
-#import "ALView+PureLayout.h"
 #import "NSString+QVWorkspace.h"
 #import "QVToolbarButtonDelegate.h"
 #import "QVTool.h"

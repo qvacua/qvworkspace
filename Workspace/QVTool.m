@@ -9,7 +9,6 @@
 
 #import "QVTool.h"
 #import "QVToolbar.h"
-#import "ALView+PureLayout.h"
 #import "QVToolbarButton.h"
 
 
