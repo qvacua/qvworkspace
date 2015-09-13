@@ -14,12 +14,12 @@
 @protocol QVWorkspaceDelegate;
 
 
-typedef enum {
+typedef NS_ENUM(NSInteger, QVToolbarLocation){
   QVToolbarLocationTop = 0,
   QVToolbarLocationRight,
   QVToolbarLocationBottom,
   QVToolbarLocationLeft,
-} QVToolbarLocation;
+};
 
 
 @interface QVWorkspace : NSView

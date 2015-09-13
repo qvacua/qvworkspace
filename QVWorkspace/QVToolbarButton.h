@@ -14,11 +14,11 @@
 @class QVTool;
 
 
-typedef enum {
-  QVToolbarButtonOrientationHorizontal = 0,
-  QVToolbarButtonOrientationVerticalLeft,
-  QVToolbarButtonOrientationVerticalRight,
-} QVToolbarButtonOrientation;
+typedef NS_ENUM(NSInteger, QVToolbarButtonOrientation) {
+    QVToolbarButtonOrientationHorizontal = 0,
+    QVToolbarButtonOrientationVerticalLeft,
+    QVToolbarButtonOrientationVerticalRight,
+};
 
 
 @interface QVToolbarButton : NSView
@@ -26,7 +26,7 @@ typedef enum {
 @property (nonatomic, readonly) NSString *title;
 @property (nonatomic, weak) QVTool *tool;
 @property (nonatomic, getter=isActive) BOOL active;
-@property (nonatomic, weak) id<QVToolbarButtonDelegate> delegate;
+@property (nonatomic, weak) id <QVToolbarButtonDelegate> delegate;
 @property (nonatomic, readonly) CGSize size;
 
 @property QVToolbarButtonOrientation orientation;
