@@ -22,15 +22,6 @@ typedef enum {
 } QVToolbarLocation;
 
 
-//! Project version number for QVWorkspace.
-FOUNDATION_EXPORT double QVWorkspaceVersionNumber;
-
-//! Project version string for QVWorkspace.
-FOUNDATION_EXPORT const unsigned char QVWorkspaceVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <QVWorkspace/PublicHeader.h>
-
-
 @interface QVWorkspace : NSView
 
 @property (readonly) QVToolbar *topBar;
