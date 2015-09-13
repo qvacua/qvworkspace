@@ -8,8 +8,6 @@
 */
 
 #import "QVTool.h"
-#import "QVToolbar.h"
-#import "QVToolbarButton.h"
 
 
 @implementation QVTool {

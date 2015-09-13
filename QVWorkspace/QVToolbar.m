@@ -11,8 +11,6 @@
 #import "QVToolbar.h"
 #import "QVTool.h"
 #import <PureLayout/PureLayout.h>
-#import "QVSeparatorLine.h"
-#import "NSView+QVWorkspace.h"
 
 
 #define SQ(x) ((x)*(x))

@@ -11,7 +11,6 @@
 #import "QVToolbarButton.h"
 #import "NSString+QVWorkspace.h"
 #import "QVToolbarButtonDelegate.h"
-#import "QVTool.h"
 
 
 static const CGFloat qButtonHorizontalPadding = 5;

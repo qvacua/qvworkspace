@@ -200,15 +200,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B972DBB1BA5857F00D8E49A /* QVWorkspaceDelegate.h in Headers */,
-				4B972DBA1BA5857F00D8E49A /* QVToolbarButtonDelegate.h in Headers */,
-				4B972DB01BA5857F00D8E49A /* NSView+QVWorkspace.h in Headers */,
-				4B972DB61BA5857F00D8E49A /* QVToolbar.h in Headers */,
 				4B972DBC1BA5857F00D8E49A /* QVWorkspaceView.h in Headers */,
+				4B972DBA1BA5857F00D8E49A /* QVToolbarButtonDelegate.h in Headers */,
 				4B972DB41BA5857F00D8E49A /* QVTool.h in Headers */,
 				4B972D881BA5853A00D8E49A /* QVWorkspace.h in Headers */,
 				4B972DB81BA5857F00D8E49A /* QVToolbarButton.h in Headers */,
 				4B972DAE1BA5857F00D8E49A /* NSString+QVWorkspace.h in Headers */,
 				4B972DB21BA5857F00D8E49A /* QVSeparatorLine.h in Headers */,
+				4B972DB01BA5857F00D8E49A /* NSView+QVWorkspace.h in Headers */,
+				4B972DB61BA5857F00D8E49A /* QVToolbar.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

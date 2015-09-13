@@ -8,11 +8,7 @@
 */
 
 #import "QVWorkspace.h"
-#import "QVToolbarButtonDelegate.h"
-#import "QVToolbar.h"
 #import <PureLayout/PureLayout.h>
-#import "NSView+QVWorkspace.h"
-#import "QVWorkspaceDelegate.h"
 
 
 static const CGFloat qMinCenterViewDimension = 100;
