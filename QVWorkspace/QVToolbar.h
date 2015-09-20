@@ -20,6 +20,7 @@
 @property (nonatomic, readonly) CGFloat dimension;
 @property (nonatomic, readonly) NSOrderedSet<QVTool *> *tools;
 
+#pragma mark Public
 - (instancetype)initWithLocation:(QVToolbarLocation)location;
 - (void)addToolView:(NSView *)toolView displayName:(NSString *)displayName;
 - (void)removeToolView:(NSView *)toolView;
