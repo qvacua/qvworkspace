@@ -12,6 +12,7 @@
 
 
 static const CGFloat qMinCenterViewDimension = 100;
+static const CGFloat qMinToolViewDimension = 50;
 
 
 @implementation QVWorkspace {
@@ -43,13 +44,11 @@ static const CGFloat qMinCenterViewDimension = 100;
 }
 
 - (void)showToolView:(NSView *)toolView {
-  for (QVToolbar *bar in _bars.allValues) {
-    for (QVTool *tool in bar.tools) {
-      if (tool.toolView == toolView) {
-        [bar showTool:tool];
-      }
-    }
-  }
+  [[self toolbarForView:toolView] showTool:[self toolForView:toolView]];
+}
+
+- (void)setDimension:(CGFloat)dimension toolView:(nonnull NSView *)toolView {
+  [[self toolbarForView:toolView] setDimension:dimension tool:[self toolForView:toolView]];
 }
 
 #pragma mark Framework internal
@@ -192,6 +191,30 @@ static const CGFloat qMinCenterViewDimension = 100;
   }
 
   return @[];
+}
+
+- (QVTool *)toolForView:(NSView *)toolView {
+  for (QVToolbar *bar in _bars.allValues) {
+    for (QVTool *tool in bar.tools) {
+      if (tool.toolView == toolView) {
+        return tool;
+      }
+    }
+  }
+
+  return nil;
+}
+
+- (QVToolbar *)toolbarForView:(NSView *)toolView {
+  for (QVToolbar *bar in _bars.allValues) {
+    for (QVTool *tool in bar.tools) {
+      if (tool.toolView == toolView) {
+        return bar;
+      }
+    }
+  }
+
+  return nil;
 }
 
 @end

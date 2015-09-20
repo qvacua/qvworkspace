@@ -28,11 +28,17 @@
   [workspace autoPinEdgeToSuperviewEdge:ALEdgeTop];
   [workspace autoPinEdgeToSuperviewEdge:ALEdgeBottom];
 
-  [workspace addToolView:[self dummyViewWithColor:[NSColor whiteColor]] displayName:@"Project" location:QVToolbarLocationLeft];
+  NSView *projectView = [self dummyViewWithColor:[NSColor whiteColor]];
+
+  [workspace addToolView:projectView displayName:@"Project" location:QVToolbarLocationLeft];
   [workspace addToolView:[self dummyViewWithColor:[NSColor brownColor]] displayName:@"Run" location:QVToolbarLocationLeft];
   [workspace addToolView:[self dummyViewWithColor:[NSColor cyanColor]] displayName:@"Structure" location:QVToolbarLocationRight];
-//  [workspace addToolView:[self dummyViewWithColor:[NSColor magentaColor]] displayName:@"Changes" location:QVToolbarLocationTop];
   [workspace addToolView:[self dummyViewWithColor:[NSColor greenColor]] displayName:@"TODO" location:QVToolbarLocationBottom];
+  //[workspace addToolView:[self dummyViewWithColor:[NSColor magentaColor]] displayName:@"Changes" location:QVToolbarLocationTop];
+
+  [workspace showToolView:projectView];
+  
+  [workspace setDimension:200 toolView:projectView];
 }
 
 - (NSView *)dummyViewWithColor:(NSColor *)color {

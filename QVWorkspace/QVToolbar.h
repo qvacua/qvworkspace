@@ -26,6 +26,7 @@
 - (void)removeToolView:(NSView *)toolView;
 - (BOOL)hasTools;
 - (void)showTool:(QVTool *)tool;
+- (void)setDimension:(CGFloat)dimension tool:(QVTool *)tool;
 
 #pragma mark NSResonder
 - (void)mouseDown:(NSEvent *)theEvent;

@@ -94,6 +94,11 @@ static const CGFloat qToolMinimumDimension = 50;
   self.superview.needsUpdateConstraints = YES;
 }
 
+- (void)setDimension:(CGFloat)dimension tool:(QVTool *)tool {
+  tool.dimension = MAX(qToolMinimumDimension, dimension);
+  _toolbarWidthConstraint.constant = self.dimension;
+}
+
 #pragma mark NSView
 - (void)drawRect:(NSRect)dirtyRect {
   [[NSColor windowBackgroundColor] set];
