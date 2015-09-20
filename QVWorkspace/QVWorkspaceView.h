@@ -8,10 +8,10 @@
 */
 
 #import <Cocoa/Cocoa.h>
+#import "QVWorkspaceDelegate.h"
 
 
 @class QVToolbar;
-@protocol QVWorkspaceDelegate;
 
 
 typedef NS_ENUM(NSInteger, QVToolbarLocation){

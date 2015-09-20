@@ -8,9 +8,9 @@
 */
 
 #import <Cocoa/Cocoa.h>
+#import "QVToolbarButtonDelegate.h"
 
 
-@protocol QVToolbarButtonDelegate;
 @class QVTool;
 
 
