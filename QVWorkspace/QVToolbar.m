@@ -21,7 +21,7 @@ static const CGFloat qToolMinimumDimension = 50;
 
 @interface QVWorkspace ()
 
-- (void)toolView:(NSView *)toolView didResize:(CGFloat)dimension;
+- (void)activeToolView:(NSView *)toolView didResize:(CGFloat)dimension;
 
 @end
 
@@ -94,7 +94,11 @@ static const CGFloat qToolMinimumDimension = 50;
 
 - (void)setDimension:(CGFloat)dimension tool:(QVTool *)tool {
   tool.dimension = MAX(qToolMinimumDimension, dimension);
-  _toolbarWidthConstraint.constant = self.dimension;
+
+  if (tool == _activeTool) {
+    _toolbarWidthConstraint.constant = self.dimension;
+    [_workspace activeToolView:_activeTool.toolView didResize:_activeTool.dimension];
+  }
 }
 
 #pragma mark NSView
@@ -182,7 +186,7 @@ static const CGFloat qToolMinimumDimension = 50;
 
   _toolbarWidthConstraint.priority = NSLayoutPriorityDragThatCannotResizeWindow;
 
-  [_workspace toolView:_activeTool.toolView didResize:_activeTool.dimension];
+  [_workspace activeToolView:_activeTool.toolView didResize:_activeTool.dimension];
 
   _mouseDownOnGoing = NO;
 }

@@ -16,6 +16,6 @@
 @protocol QVWorkspaceDelegate <NSObject>
 
 @optional
-- (void)toolView:(nonnull NSView *)toolView didResize:(CGFloat)dimension;
+- (void)activeToolView:(nonnull NSView *)toolView didResize:(CGFloat)dimension;
 
 @end

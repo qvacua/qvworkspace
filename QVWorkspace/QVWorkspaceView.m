@@ -52,9 +52,9 @@ static const CGFloat qMinToolViewDimension = 50;
 }
 
 #pragma mark Framework internal
-- (void)toolView:(NSView *)toolView didResize:(CGFloat)dimension {
-  if ([_delegate respondsToSelector:@selector(toolView:didResize:)]) {
-    [_delegate toolView:toolView didResize:dimension];
+- (void)activeToolView:(NSView *)toolView didResize:(CGFloat)dimension {
+  if ([_delegate respondsToSelector:@selector(activeToolView:didResize:)]) {
+    [_delegate activeToolView:toolView didResize:dimension];
   }
 }
 
