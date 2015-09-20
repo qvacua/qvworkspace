@@ -15,8 +15,8 @@ static const CGFloat qMinCenterViewDimension = 100;
 
 
 @implementation QVWorkspace {
-  NSDictionary *_bars;
-  NSMutableArray *_toolbarConstraints;
+  NSDictionary<NSNumber *, QVToolbar*> *_bars;
+  NSMutableArray<NSLayoutConstraint *> *_toolbarConstraints;
 }
 
 #pragma mark Properties
@@ -124,7 +124,7 @@ static const CGFloat qMinCenterViewDimension = 100;
   }
 }
 
-- (NSArray *)centerViewConstraints {
+- (NSArray<NSLayoutConstraint *> *)centerViewConstraints {
   return @[
       [_centerView autoSetDimension:ALDimensionWidth toSize:qMinCenterViewDimension relation:NSLayoutRelationGreaterThanOrEqual],
       [_centerView autoSetDimension:ALDimensionHeight toSize:qMinCenterViewDimension relation:NSLayoutRelationGreaterThanOrEqual],
@@ -135,7 +135,7 @@ static const CGFloat qMinCenterViewDimension = 100;
   ];
 }
 
-- (NSArray *)topBarConstraints {
+- (NSArray<NSLayoutConstraint *> *)topBarConstraints {
   if (_topBar.hasTools) {
     return @[
         [_topBar autoPinEdgeToSuperviewEdge:ALEdgeTop],
@@ -147,7 +147,7 @@ static const CGFloat qMinCenterViewDimension = 100;
   return @[];
 }
 
-- (NSArray *)bottomBarConstraints {
+- (NSArray<NSLayoutConstraint *> *)bottomBarConstraints {
   if (_bottomBar.hasTools) {
     return @[
         [_bottomBar autoPinEdgeToSuperviewEdge:ALEdgeBottom],
@@ -159,7 +159,7 @@ static const CGFloat qMinCenterViewDimension = 100;
   return @[];
 }
 
-- (NSArray *)leftBarConstraints {
+- (NSArray<NSLayoutConstraint *> *)leftBarConstraints {
   if (_leftBar.hasTools) {
     return @[
         [_leftBar autoPinEdgeToSuperviewEdge:ALEdgeLeft],
@@ -171,7 +171,7 @@ static const CGFloat qMinCenterViewDimension = 100;
   return @[];
 }
 
-- (NSArray *)rightBarConstraints {
+- (NSArray<NSLayoutConstraint *> *)rightBarConstraints {
   if (_rightBar.hasTools) {
     return @[
         [_rightBar autoPinEdgeToSuperviewEdge:ALEdgeRight],

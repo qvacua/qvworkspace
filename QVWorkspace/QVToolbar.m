@@ -20,7 +20,7 @@ static const CGFloat qToolMinimumDimension = 50;
 
 
 @implementation QVToolbar {
-  NSMutableOrderedSet *_tools;
+  NSMutableOrderedSet<QVTool *> *_tools;
 
   QVSeparatorLine *_buttonToToolViewSeparator;
   QVSeparatorLine *_separator;
