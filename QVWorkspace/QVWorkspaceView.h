@@ -24,22 +24,22 @@ typedef NS_ENUM(NSInteger, QVToolbarLocation){
 
 @interface QVWorkspace : NSView
 
-@property (readonly) QVToolbar *topBar;
-@property (readonly) QVToolbar *rightBar;
-@property (readonly) QVToolbar *bottomBar;
-@property (readonly) QVToolbar *leftBar;
-@property id<QVWorkspaceDelegate> delegate;
+@property (nonnull, readonly) QVToolbar *topBar;
+@property (nonnull, readonly) QVToolbar *rightBar;
+@property (nonnull, readonly) QVToolbar *bottomBar;
+@property (nonnull, readonly) QVToolbar *leftBar;
+@property (nullable) id<QVWorkspaceDelegate> delegate;
 
-@property (nonatomic) NSView *centerView;
+@property (nullable, nonatomic) NSView *centerView;
 
 #pragma mark Public
-- (void)addToolView:(NSView *)toolView displayName:(NSString *)displayName location:(QVToolbarLocation)location;
-- (void)removeToolView:(NSView *)toolView;
+- (void)addToolView:(nonnull NSView *)toolView displayName:(nonnull NSString *)displayName location:(QVToolbarLocation)location;
+- (void)removeToolView:(nonnull NSView *)toolView;
 
-- (void)showToolView:(NSView *)toolView;
+- (void)showToolView:(nonnull NSView *)toolView;
 
 #pragma mark NSView
-- (instancetype)initWithFrame:(NSRect)frameRect;
+- (nonnull instancetype)initWithFrame:(NSRect)frameRect;
 - (void)updateConstraints;
 - (void)drawRect:(NSRect)dirtyRect;
 
