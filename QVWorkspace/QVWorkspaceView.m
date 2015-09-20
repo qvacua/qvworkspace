@@ -42,6 +42,7 @@ static const CGFloat qMinCenterViewDimension = 100;
   [self updateToolbars];
 }
 
+#pragma mark Framework internal
 - (void)toolbarWillResize:(QVToolbar *)toolbar {
   if ([_delegate respondsToSelector:@selector(toolbarWillResize:)]) {
     [_delegate toolbarWillResize:toolbar];

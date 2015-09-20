@@ -19,6 +19,15 @@
 static const CGFloat qToolMinimumDimension = 50;
 
 
+@interface QVWorkspace ()
+
+- (void)toolbarWillResize:(QVToolbar *)toolbar;
+- (void)toolbarDidResize:(QVToolbar *)toolbar;
+- (CGFloat)toolbar:(QVToolbar *)toolbar willResizeToDimension:(CGFloat)dimension;
+
+@end
+
+
 @implementation QVToolbar {
   NSMutableOrderedSet<QVTool *> *_tools;
 

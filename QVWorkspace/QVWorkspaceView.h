@@ -35,9 +35,6 @@ typedef NS_ENUM(NSInteger, QVToolbarLocation){
 #pragma mark Public
 - (void)addToolView:(NSView *)toolView displayName:(NSString *)displayName location:(QVToolbarLocation)location;
 - (void)removeToolView:(NSView *)toolView;
-- (void)toolbarWillResize:(QVToolbar *)toolbar;
-- (void)toolbarDidResize:(QVToolbar *)toolbar;
-- (CGFloat)toolbar:(QVToolbar *)toolbar willResizeToDimension:(CGFloat)dimension;
 
 #pragma mark NSView
 - (instancetype)initWithFrame:(NSRect)frameRect;
