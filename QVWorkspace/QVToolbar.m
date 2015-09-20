@@ -454,7 +454,7 @@ static const CGFloat qToolMinimumDimension = 50;
 }
 
 - (CGFloat)buttonDimension {
-  QVToolbarButton *button = [_tools[0] button];
+  QVToolbarButton *button = (QVToolbarButton *)[_tools[0] button];
   return (_location == QVToolbarLocationTop || _location == QVToolbarLocationBottom) ? button.size.height : button.size.width;
 }
 
