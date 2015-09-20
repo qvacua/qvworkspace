@@ -52,24 +52,10 @@ static const CGFloat qMinToolViewDimension = 50;
 }
 
 #pragma mark Framework internal
-- (void)toolbarWillResize:(QVToolbar *)toolbar {
-  if ([_delegate respondsToSelector:@selector(toolbarWillResize:)]) {
-    [_delegate toolbarWillResize:toolbar];
+- (void)toolView:(NSView *)toolView didResize:(CGFloat)dimension {
+  if ([_delegate respondsToSelector:@selector(toolView:didResize:)]) {
+    [_delegate toolView:toolView didResize:dimension];
   }
-}
-
-- (void)toolbarDidResize:(QVToolbar *)toolbar {
-  if ([_delegate respondsToSelector:@selector(toolbarDidResize:)]) {
-    [_delegate toolbarDidResize:toolbar];
-  }
-}
-
-- (CGFloat)toolbar:(QVToolbar *)toolbar willResizeToDimension:(CGFloat)dimension {
-  if ([_delegate respondsToSelector:@selector(toolbar:willResizeToDimension:)]) {
-    return [_delegate toolbar:toolbar willResizeToDimension:dimension];
-  }
-
-  return dimension;
 }
 
 #pragma mark NSView

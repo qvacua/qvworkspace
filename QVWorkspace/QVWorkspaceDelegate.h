@@ -16,8 +16,6 @@
 @protocol QVWorkspaceDelegate <NSObject>
 
 @optional
-- (CGFloat)toolbar:(QVToolbar *)toolbar willResizeToDimension:(CGFloat)dimension;
-- (void)toolbarWillResize:(QVToolbar *)toolbar;
-- (void)toolbarDidResize:(QVToolbar *)toolbar;
+- (void)toolView:(nonnull NSView *)toolView didResize:(CGFloat)dimension;
 
 @end
