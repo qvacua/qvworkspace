@@ -21,7 +21,7 @@
 
   _toolView = toolView;
   _displayName = [displayName copy];
-  _dimension = 50;
+  _dimension = 150;
 
   return self;
 }
