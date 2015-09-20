@@ -43,6 +43,7 @@ static const CGFloat qToolMinimumDimension = 50;
   BOOL _mouseDownOnGoing;
 }
 
+#pragma mark Public
 - (instancetype)initWithLocation:(QVToolbarLocation)location {
   self = [super initForAutoLayout];
   if (self == nil) {return nil;}
@@ -78,6 +79,21 @@ static const CGFloat qToolMinimumDimension = 50;
   [self updateToolbar];
 }
 
+- (void)showTool:(QVTool *)tool {
+  [self makeToolbarButtonActive:tool.button];
+  
+  if (tool.active) {
+    _activeTool = tool;
+    [self addSubview:_buttonToToolViewSeparator];
+  } else {
+    _activeTool = nil;
+    [_buttonToToolViewSeparator removeFromSuperview];
+  }
+  
+  self.needsUpdateConstraints = YES;
+  self.superview.needsUpdateConstraints = YES;
+}
+
 #pragma mark NSView
 - (void)drawRect:(NSRect)dirtyRect {
   [[NSColor windowBackgroundColor] set];
@@ -86,29 +102,21 @@ static const CGFloat qToolMinimumDimension = 50;
 
 #pragma mark QVToolbarButtonDelegate
 - (void)toolbarButton:(QVToolbarButton *)toolbarButton clickedWithEvent:(NSEvent *)event {
+  [self showTool:toolbarButton.tool];
+}
+
+- (void)makeToolbarButtonActive:(QVToolbarButton *)toolbarButton {
   toolbarButton.active = !toolbarButton.active;
   toolbarButton.tool.active = toolbarButton.active;
-
+  
   void (^block)(QVTool *, NSUInteger, BOOL *) = ^(QVTool *tool, NSUInteger idx, BOOL *stop) {
     if (toolbarButton != tool.button) {
       tool.active = NO;
       tool.button.active = NO;
     }
   };
-
+  
   [_tools enumerateObjectsUsingBlock:block];
-
-  if (toolbarButton.tool.active) {
-    _activeTool = toolbarButton.tool;
-    [self addSubview:_buttonToToolViewSeparator];
-  }
-  else {
-    _activeTool = nil;
-    [_buttonToToolViewSeparator removeFromSuperview];
-  }
-
-  self.needsUpdateConstraints = YES;
-  self.superview.needsUpdateConstraints = YES;
 }
 
 #pragma mark Properties

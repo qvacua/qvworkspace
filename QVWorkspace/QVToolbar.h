@@ -18,12 +18,13 @@
 @property (nonatomic, readonly) QVToolbarLocation location;
 @property (nonatomic) NSUInteger dragIncrement;
 @property (nonatomic, readonly) CGFloat dimension;
-@property (nonatomic, readonly) NSOrderedSet *tools;
+@property (nonatomic, readonly) NSOrderedSet<QVTool *> *tools;
 
 - (instancetype)initWithLocation:(QVToolbarLocation)location;
 - (void)addToolView:(NSView *)toolView displayName:(NSString *)displayName;
 - (void)removeToolView:(NSView *)toolView;
 - (BOOL)hasTools;
+- (void)showTool:(QVTool *)tool;
 
 #pragma mark NSResonder
 - (void)mouseDown:(NSEvent *)theEvent;

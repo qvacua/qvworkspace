@@ -42,6 +42,16 @@ static const CGFloat qMinCenterViewDimension = 100;
   [self updateToolbars];
 }
 
+- (void)showToolView:(NSView *)toolView {
+  for (QVToolbar *bar in _bars.allValues) {
+    for (QVTool *tool in bar.tools) {
+      if (tool.toolView == toolView) {
+        [bar showTool:tool];
+      }
+    }
+  }
+}
+
 #pragma mark Framework internal
 - (void)toolbarWillResize:(QVToolbar *)toolbar {
   if ([_delegate respondsToSelector:@selector(toolbarWillResize:)]) {
