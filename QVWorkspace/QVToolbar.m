@@ -79,7 +79,7 @@ static const CGFloat qToolMinimumDimension = 50;
 
 - (void)showTool:(QVTool *)tool {
   [self makeToolbarButtonActive:tool.button];
-  
+
   if (tool.active) {
     _activeTool = tool;
     [self addSubview:_buttonToToolViewSeparator];
@@ -87,7 +87,7 @@ static const CGFloat qToolMinimumDimension = 50;
     _activeTool = nil;
     [_buttonToToolViewSeparator removeFromSuperview];
   }
-  
+
   self.needsUpdateConstraints = YES;
   self.superview.needsUpdateConstraints = YES;
 }
@@ -107,6 +107,15 @@ static const CGFloat qToolMinimumDimension = 50;
   NSRectFill(self.bounds);
 }
 
+- (nullable NSView *)hitTest:(NSPoint)point {
+  if (NSMouseInRect([self convertPoint:point fromView:self.superview], self.resizeCursorRect, self.isFlipped)) {
+    return self;
+  }
+
+  return [super hitTest:point];
+}
+
+
 #pragma mark QVToolbarButtonDelegate
 - (void)toolbarButton:(QVToolbarButton *)toolbarButton clickedWithEvent:(NSEvent *)event {
   [self showTool:toolbarButton.tool];
@@ -115,14 +124,14 @@ static const CGFloat qToolMinimumDimension = 50;
 - (void)makeToolbarButtonActive:(QVToolbarButton *)toolbarButton {
   toolbarButton.active = !toolbarButton.active;
   toolbarButton.tool.active = toolbarButton.active;
-  
+
   void (^block)(QVTool *, NSUInteger, BOOL *) = ^(QVTool *tool, NSUInteger idx, BOOL *stop) {
     if (toolbarButton != tool.button) {
       tool.active = NO;
       tool.button.active = NO;
     }
   };
-  
+
   [_tools enumerateObjectsUsingBlock:block];
 }
 
