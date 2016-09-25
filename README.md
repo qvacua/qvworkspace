@@ -1,3 +1,8 @@
+Obsolete
+========
+
+This project got integrated in [VimR](https://github.com/qvacua/vimr).
+
 QVWorkspace
 ===========
 
